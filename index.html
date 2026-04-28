@@ -1,252 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ULTIMATE APUSH Period 8 Guide</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0a0a0f;
-    --surface: #12121a;
-    --border: #2a2a3a;
-    --red: #e63946;
-    --blue: #457b9d;
-    --gold: #e9c46a;
-    --teal: #2a9d8f;
-    --text: #e8e8f0;
-    --muted: #888899;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', sans-serif; font-weight: 300; line-height: 1.7; }
-  header { background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%); border-bottom: 2px solid var(--red); padding: 3rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
-  header .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--red); text-transform: uppercase; margin-bottom: 1rem; }
-  header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; color: #fff; }
-  header h1 span { color: var(--red); }
-  nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 1rem; display: flex; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 100; }
-  nav a { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--muted); text-decoration: none; padding: 1rem; white-space: nowrap; transition: 0.2s; }
-  nav a:hover { color: var(--text); border-bottom: 2px solid var(--red); }
-  main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
-  .section { margin-bottom: 4rem; }
-  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-  .section-num { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--red); background: rgba(230,57,70,0.1); padding: 0.2rem 0.5rem; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #fff; }
-  .grid { display: grid; gap: 1.5rem; margin-bottom: 1.5rem; }
-  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
-  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .card { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; position: relative; }
-  .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
-  .card.red::before { background: var(--red); }
-  .card.blue::before { background: var(--blue); }
-  .card.gold::before { background: var(--gold); }
-  .card.teal::before { background: var(--teal); }
-  .card h3 { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.75rem; color: #fff; }
-  .highlight { border: 1px solid rgba(233,196,106,0.3); background: rgba(233,196,106,0.05); padding: 1.5rem; margin: 1.5rem 0; font-size: 0.9rem; }
-  .highlight strong { color: var(--gold); display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.7rem; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 1rem; }
-  th { text-align: left; background: #0d0d15; padding: 0.8rem; color: var(--muted); border-bottom: 2px solid var(--border); font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; }
-  td { padding: 0.8rem; border-bottom: 1px solid var(--border); color: #c8c8d8; vertical-align: top; }
-  .qa-item { border: 1px solid var(--border); background: var(--surface); margin-bottom: 0.5rem; }
-  .qa-q { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--gold); padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; }
-  .qa-a { padding: 0 1rem 1rem; display: none; font-size: 0.85rem; color: #c8c8d8; border-top: 1px solid var(--border); padding-top: 1rem; }
-  .qa-item.open .qa-a { display: block; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>APUSH Period 8 · Complete Study Guide (1945–1980)</title>
+    <meta name="description" content="Comprehensive APUSH Period 8 review: Cold War, Civil Rights, Vietnam, Red Scare, Suburbanization, Counterculture, and key presidential policies.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f9fc;
+            font-family: system-ui, 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            color: #1a2a3f;
+            line-height: 1.5;
+        }
+
+        /* layout */
+        .app {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 980px) {
+            .app {
+                flex-direction: row;
+            }
+        }
+
+        /* side navbar (TOC) */
+        .toc {
+            background: #fff;
+            border-right: 1px solid #e2e9f0;
+            padding: 2rem 1rem 2rem 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        @media (min-width: 980px) {
+            .toc {
+                width: 280px;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                overflow-y: auto;
+                align-self: start;
+            }
+        }
+
+        .toc h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.2px;
+            border-left: 3px solid #c52828;
+            padding-left: 0.75rem;
+            color: #0b2b3b;
+        }
+
+        .toc nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.6rem;
+        }
+
+        .toc a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #2c4d6e;
+            font-weight: 500;
+            display: inline-block;
+            transition: color 0.2s;
+            border-left: 2px solid transparent;
+            padding-left: 0.6rem;
+        }
+
+        .toc a:hover {
+            color: #bc3f2e;
+            border-left-color: #bc3f2e;
+        }
+
+        /* main content */
+        .main-content {
+            flex: 1;
+            background: #ffffff;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.02);
+        }
+
+        @media (min-width: 980px) {
+            .main-content {
+                padding: 2rem 2.5rem;
+            }
+        }
+
+        /* typography & sections */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1d4e6e, #b13e2a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subhead {
+            color: #4a627a;
+            border-bottom: 2px solid #e3edf5;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 1.8rem 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 3px solid #cbdbe6;
+            color: #1d3f5c;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem 0;
+            color: #2a577b;
+        }
+
+        .theme-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .theme-card {
+            background: #f0f4fa;
+            flex: 1 1 200px;
+            padding: 1rem 1rem;
+            border-radius: 1rem;
+            border-left: 5px solid #c52828;
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .theme-card span {
+            font-weight: 700;
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #941e0c;
+        }
+
+        .key-law, .event {
+            background: #fef9e6;
+            border-left: 4px solid #e6a017;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .cold-war-stat {
+            background: #eaf4f0;
+            padding: 0.75rem 1rem;
+            border-radius: 14px;
+            font-size: 0.9rem;
+            margin: 0.8rem 0;
+        }
+
+        ul, ol {
+            margin: 0.6rem 0 0.8rem 1.8rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: #b2412c;
+            font-weight: 600;
+        }
+
+        .glossary {
+            background-color: #f8f3e8;
+            padding: 1.2rem;
+            border-radius: 18px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .btn-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #2a577b;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.2s;
+            z-index: 99;
+        }
+
+        .btn-top:hover {
+            background: #bc3f2e;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #ccc, transparent);
+        }
+
+        @media (max-width: 720px) {
+            .main-content {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6f8eaa;
+            border-top: 1px solid #e0ecf5;
+            padding-top: 1.5rem;
+        }
+    </style>
 </head>
 <body>
+<div class="app">
+    <aside class="toc">
+        <h2>📘 Period 8 Contents</h2>
+        <nav>
+            <ul>
+                <li><a href="#big-themes">🎯 4 Big Themes</a></li>
+                <li><a href="#truman">🗽 Truman Domestic</a></li>
+                <li><a href="#cold-war-origins">❄️ Cold War Origins</a></li>
+                <li><a href="#key-policies">⚙️ Key Policies (Doctrine → MAD)</a></li>
+                <li><a href="#eisenhower">🏛️ Eisenhower Era</a></li>
+                <li><a href="#red-scare">🔴 Red Scare & McCarthyism</a></li>
+                <li><a href="#korean-war">🇰🇵 Korean War</a></li>
+                <li><a href="#cuba-missile">🇨🇺 Cuba & Missile Crisis</a></li>
+                <li><a href="#vietnam">🇻🇳 Vietnam War</a></li>
+                <li><a href="#civil-rights">✊ Civil Rights Movement</a></li>
+                <li><a href="#jfk-lbj">🕊️ JFK & Great Society</a></li>
+                <li><a href="#1968-nixon">📆 1968 Turmoil & Nixon</a></li>
+                <li><a href="#social-movements">🌈 Social Movements (60s-70s)</a></li>
+                <li><a href="#suburb-culture">🏡 Suburbia & 1950s Culture</a></li>
+                <li><a href="#conservatism">📈 Rise of Conservatism</a></li>
+                <li><a href="#exam-tips">📝 Exam Tips</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-<header>
-  <div class="eyebrow">AP United States History · Unit 8</div>
-  <h1>The Global <span>Superpower</span> Era</h1>
-  <div class="subtitle">1945 – 1980 · Comprehensive Integration</div>
-</header>
+    <main class="main-content">
+        <h1>🇺🇸 APUSH Period 8 (1945–1980)</h1>
+        <div class="subhead">Cold War · Civil Rights · Vietnam · Counterculture · Conservative Resurgence</div>
 
-<nav>
-  <a href="#roots">Roots & Origins</a>
-  <a href="#containment">Containment</a>
-  <a href="#politics">Domestic Politics</a>
-  <a href="#society">Society & Culture</a>
-  <a href="#civilrights">Civil Rights</a>
-  <a href="#vietnam">Vietnam & Protest</a>
-  <a href="#crisis">Crisis of Trust</a>
-</nav>
+        <section id="big-themes">
+            <div class="theme-cards">
+                <div class="theme-card"><span>🌍 Superpower</span> U.S. global leader & free-market defender</div>
+                <div class="theme-card"><span>☭ Cold War</span> Ideology, proxy wars & arms race</div>
+                <div class="theme-card"><span>⚖️ Civil Rights</span> Legal equality & liberation movements</div>
+                <div class="theme-card"><span>🎸 Mass Culture</span> Affluence, conformity & counterculture</div>
+            </div>
+        </section>
 
-<main>
+        <section id="truman">
+            <h2>Harry Truman — Domestic Struggles & Fair Deal</h2>
+            <p><strong>22nd Amendment</strong> (1951) limited presidents to two terms — symbolic rebuke of FDR. <strong>Taft-Hartley Act (1947)</strong> over Truman’s veto: outlawed closed shop, banned secondary boycotts, required anti-communist affidavits. Union power gutted after Wagner Act. <strong>Fair Deal (1949)</strong> sought national health insurance, civil rights, education aid — blocked by Southern Democrats & Republicans. Only min wage raised (40¢→75¢). Yet Truman desegregated military via <strong>EO 9981 (1948)</strong> after pressure from A. Philip Randolph. First desegregated war: Korea.</p>
+        </section>
 
-  <section class="section" id="roots">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">Ideological Roots & Postwar Reality</h2>
-    </div>
-    [attachment_0](attachment)
-    <div class="grid grid-2">
-      <div class="card blue">
-        <h3>Communism vs. Capitalism</h3>
-        <p><strong>Bolshevik Roots:</strong> Established 1917 (Lenin). Based on Marx & Engels (<em>Communist Manifesto</em>). Goals: Classless society, abolition of private property.</p>
-        <p style="margin-top:0.5rem;"><strong>Post-WWII Tension:</strong> At the <strong>Yalta Conference (1945)</strong>, Stalin promised free elections in Poland/Eastern Europe. He broke this to create a buffer zone against Germany (20M Soviet deaths).</p>
-      </div>
-      <div class="card red">
-        <h3>Post-WWII Architecture</h3>
-        <ul>
-          <li><strong>Bretton Woods (1944):</strong> Created IMF and World Bank to stabilize the global economy.</li>
-          <li><strong>United Nations (1945):</strong> Established to prevent WWIII.</li>
-          <li><strong>Iron Curtain (1946):</strong> Churchill's speech defining the seal between East/West.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <section id="cold-war-origins">
+            <h2>Origins of the Cold War</h2>
+            <p><strong>Why begin?</strong> U.S. needed open markets in Europe/Asia; USSR wanted buffer zone in Eastern Europe. Stalin broke Yalta pledges. Pre-existing tensions: U.S. didn’t recognize USSR until 1933, Hitler-Stalin Pact (1939). <strong>“Cold” =</strong> no direct U.S.-USSR combat, but proxy wars (Korea, Vietnam).<br>
+            <strong>George Kennan’s Long Telegram (1946)</strong> → <strong>Containment.</strong> Churchill’s “Iron Curtain” speech (March 1946). China falls to Mao (1949) globalized the threat.</p>
+        </section>
 
-  <section class="section" id="containment">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">The Containment Machine</h2>
-    </div>
-    <div class="highlight">
-      <strong>NSC-68 (1950) Goals</strong>
-      1. Block Soviet expansion. 2. Expose falsities of Soviet pretensions. 3. Induce retraction of Soviet influence. 4. Foster seeds of destruction within the Soviet system.
-    </div>
-    <div class="grid grid-3">
-      <div class="card teal">
-        <h3>The China "Loss"</h3>
-        <p><strong>Chiang Kai-shek</strong> (Nationalist) vs. <strong>Mao Zedong</strong> (Communist). Despite U.S. aid, Chiang's corrupt gov fell in 1949. Republicans blamed Truman for "losing China."</p>
-      </div>
-      <div class="card red">
-        <h3>Strategic Tools</h3>
-        <ul>
-          <li><strong>Truman Doctrine:</strong> Containment through financial aid ($400M to Greece/Turkey).</li>
-          <li><strong>Marshall Plan:</strong> Rebuilding Western Europe to stop communism's appeal.</li>
-          <li><strong>CIA Ops:</strong> 1953 Iran (Ajax), 1954 Guatemala (protecting United Fruit Co).</li>
-        </ul>
-      </div>
-      <div class="card blue">
-        <h3>Korea (1950-53)</h3>
-        <p>Divided at <strong>38th Parallel</strong>. First "Police Action" (no declaration of war). Proved containment could work but cost 33K+ American lives.</p>
-      </div>
-    </div>
-    
-  </section>
+        <section id="key-policies">
+            <h2>Key Cold War Policies</h2>
+            <div class="key-law"><strong>Truman Doctrine (1947):</strong> $400M aid to Greece/Turkey — first containment application. Domino Theory logic.</div>
+            <div class="key-law"><strong>Marshall Plan (1948-52):</strong> $12+ billion rebuilt Western Europe, rejected by Soviets; huge success.</div>
+            <div class="key-law"><strong>Berlin Airlift (1948-49):</strong> Soviets blockaded West Berlin; U.S./Britain flew supplies 11 months → blockade lifted May 1949.</div>
+            <p><strong>NATO (1949):</strong> attack on one = attack on all → Warsaw Pact (1955). <strong>NSC-68 (1950):</strong> massive military buildup (20% GNP → defense budget quadrupled). Goals: block Soviet expansion, expose falsities, rollback.<br>
+            <strong>MAD (Mutually Assured Destruction):</strong> nuclear stockpiles prevented direct war. “Greatest existential threat is ourselves.”</p>
+            <h3>Covert CIA ops under Eisenhower</h3>
+            <ul>
+                <li><strong>Iran (1953 – Operation Ajax):</strong> overthrew Mossadegh (nationalized oil), installed Shah → long-term anti‑American sentiment.</li>
+                <li><strong>Guatemala (1954):</strong> overthrew Arbenz (land reform threatening United Fruit). Set stage for civil war.</li>
+                <li><strong>Indochina:</strong> funded France vs. Ho Chi Minh → Dien Bien Phu 1954, groundwork for Vietnam.</li>
+            </ul>
+        </section>
 
-  <section class="section" id="politics">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Domestic Politics & Fear</h2>
-    </div>
-    <div class="grid grid-2">
-      <div class="card gold">
-        <h3>The 1948 Upset</h3>
-        <p><strong>Truman vs. Dewey:</strong> Everyone predicted a Dewey win. Truman won 303-189 electoral votes, fueled by his whistle-stop tour and civil rights stance.</p>
-      </div>
-      <div class="card red">
-        <h3>The Republican Response</h3>
-        <ul>
-          <li><strong>Taft-Hartley Act (1947):</strong> Outlawed closed shops, required anti-communist oaths from union leaders. Passed over Truman's veto.</li>
-          <li><strong>22nd Amendment:</strong> Limited presidents to 2 terms (repudiation of FDR).</li>
-          <li><strong>McCarthyism:</strong> Reckless accusations. Media like <em>I Led Three Lives</em> and <em>The Red Menace</em> fueled the fire.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card teal">
-      <h3>Eisenhower's "Hidden Hand"</h3>
-      <p>Ike played the "grandfather" but was a master of covert power. He expanded Social Security and created the <strong>Interstate Highway Act (1956)</strong>, yet warned of the <strong>Military-Industrial Complex</strong> in his 1961 farewell.</p>
-    </div>
-  </section>
+        <section id="eisenhower">
+            <h2>Eisenhower Presidency (1953–1961)</h2>
+            <p><strong>Hidden hand presidency</strong> – passive style, corporate cabinet, but accepted New Deal programs. <strong>New Look</strong> defense: nuclear “massive retaliation” over conventional forces.<br>
+            <strong>Farewell Address (1961):</strong> warned of <strong>military‑industrial complex</strong> – alliance between defense industry and military that threatened democracy. Annual military spending > net income of all U.S. corporations combined.</p>
+        </section>
 
-  <section class="section" id="civilrights">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">The Long Struggle for Equality</h2>
-    </div>
-    <div class="highlight">
-      <strong>The NAACP Strategy</strong>
-      Instead of K-12, the NAACP first targeted graduate and professional schools (like law schools) where the lack of "equality" was most legally undeniable.
-    </div>
-    <div class="grid grid-3">
-      <div class="card red">
-        <h3>Early Moves</h3>
-        <ul>
-          <li><strong>Double-V:</strong> WWII slogan—Victory abroad/at home.</li>
-          <li><strong>A. Philip Randolph:</strong> Pressured Truman to end military segregation (EO 9981).</li>
-          <li><strong>Jackie Robinson:</strong> Broken barrier April 15, 1947.</li>
-        </ul>
-      </div>
-      <div class="card blue">
-        <h3>Southern Resistance</h3>
-        <p><strong>Southern Manifesto:</strong> 96 congressmen signed a protest against <em>Brown</em>. <strong>Prince Edward County, VA:</strong> Closed its entire public school system (1959-64) rather than integrate.</p>
-      </div>
-      <div class="card gold">
-        <h3>Student Power</h3>
-        <p><strong>Greensboro Sit-ins (1960):</strong> Sparked 70,000+ participants nationwide. <strong>Freedom Rides:</strong> Tested interstate bus desegregation; met with mob violence.</p>
-      </div>
-    </div>
-  </section>
+        <section id="red-scare">
+            <h2>🔴 Second Red Scare & McCarthyism</h2>
+            <p>Sen. <strong>Joseph McCarthy</strong> (1950) claimed 205 Communists in gov’t – never evidence. “McCarthyism” = accusation without proof. Lost credibility in Army‑McCarthy hearings.<br>
+            <strong>Hollywood Ten</strong> blacklisted. <strong>Margaret Chase Smith</strong> “Declaration of Conscience” (1950) denounced tactics. <strong>Smith Act, Internal Security Act, Federal Employee Loyalty Program.</strong> Rosenbergs executed (1953).<br>
+            <span class="cold-war-stat">📺 Anti‑communist media: TV shows, films (<em>I Married a Communist</em>), comics. The Cincinnati Reds briefly renamed “Redlegs.” American Legion staged mock communist takeover in Mosinee, WI (1950).</span></p>
+        </section>
 
-  <section class="section" id="vietnam">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2 class="section-title">Vietnam, SDS, and the New Left</h2>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Group/Event</th><th>Specific Detail</th><th>Impact</th></tr></thead>
-        <tbody>
-          <tr><td><strong>SDS</strong></td><td>Port Huron Statement (Tom Hayden)</td><td>Called for "participatory democracy"; birth of the New Left.</td></tr>
-          <tr><td><strong>My Lai</strong></td><td>Lt. Calley / Ron Ridenhour</td><td>300-500 civilians killed; Ridenhour (whistleblower) exposed the atrocity.</td></tr>
-          <tr><td><strong>Kent State</strong></td><td>May 4, 1970</td><td>4 students killed by Nat. Guard; led to nationwide student strike.</td></tr>
-          <tr><td><strong>Jackson State</strong></td><td>May 14, 1970</td><td>2 Black students killed by police 10 days after Kent State; often overlooked.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <section id="korean-war">
+            <h2>🇰🇵 Korean War (1950–1953)</h2>
+            <p>North Korea invaded South (June 1950). Truman called it UN “police action” – no declaration of war. MacArthur pushed north, China intervened. Truman fired MacArthur for insubordination (April 1951). Stalemate → armistice 1953: Korea split at 38th parallel, DMZ created. ~33,629 Americans killed. Effects: strengthened presidential war powers, deepened Cold War mentality, set stage for Vietnam.</p>
+        </section>
 
-  <section class="section" id="crisis">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2 class="section-title">The 1968 Breaking Point & Watergate</h2>
-    </div>
-    
-    <div class="grid grid-2">
-      <div class="card red">
-        <h3>Election of 1968 Stats</h3>
-        <ul>
-          <li><strong>Nixon (R):</strong> 301 EV (43.4% popular) — "Law and Order"</li>
-          <li><strong>Humphrey (D):</strong> 191 EV (42.7% popular) — Hurt by Chicago riots.</li>
-          <li><strong>Wallace (I):</strong> 46 EV (13.5% popular) — Segregationist "backlash."</li>
-        </ul>
-      </div>
-      <div class="card blue">
-        <h3>The Nixon Fall</h3>
-        <p><strong>Watergate:</strong> Nixon didn't order the break-in, but he orchestrated the <strong>cover-up</strong>. Faced with certain impeachment, he resigned Aug 1974. <strong>War Powers Act (1973)</strong> limited the president's ability to wage war without Congress.</p>
-      </div>
-    </div>
-  </section>
+        <section id="cuba-missile">
+            <h2>Cuban Missile Crisis (1962)</h2>
+            <p>Castro’s revolution (1959) → Bay of Pigs fiasco (1961). Soviets install nuclear missiles in Cuba. U.S. discovers Oct 15. <strong>Kennedy chooses naval quarantine</strong> instead of airstrike. <strong>Vasili Arkhipov</strong> (Soviet sub commander) refused to launch nuclear torpedo – saved world. Deal: U.S. secretly removed missiles from Turkey & promised not to invade Cuba; Soviets remove Cuban missiles. Closest to nuclear war in history.</p>
+        </section>
 
-  <section class="section">
-    <div class="section-header">
-      <span class="section-num">07</span>
-      <h2 class="section-title">Exam Prep Q&A</h2>
-    </div>
-    <div class="qa-item">
-      <div class="qa-q">What was the "hidden" missile trade of 1962?</div>
-      <div class="qa-a">To end the Cuban Missile Crisis, JFK publicly promised not to invade Cuba, but secretly agreed to remove U.S. missiles from Turkey and Italy. Soviet officer <strong>Vasili Arkhipov</strong> is credited with refusing to authorize a nuclear torpedo launch during the crisis, preventing total war.</div>
-    </div>
-    <div class="qa-item">
-      <div class="qa-q">How did the GOP respond to FDR's legacy?</div>
-      <div class="qa-a">They passed the 22nd Amendment to limit terms and the Taft-Hartley Act to roll back the power of labor unions granted by the Wagner Act.</div>
-    </div>
-    <div class="qa-item">
-      <div class="qa-q">What defined the Carter/Ford era?</div>
-      <div class="qa-a">Ford: Nixon's pardon (lost him support) and the Fall of Saigon. Carter: Camp David Accords (High point) vs. Iranian Hostage Crisis and Stagflation (Low points).</div>
-    </div>
-  </section>
+        <section id="vietnam">
+            <h2>🇻🇳 Vietnam War (1954–1975)</h2>
+            <p><strong>Domino Theory</strong> drove intervention. Gulf of Tonkin Resolution (1964) gave LBJ blank check – second attack never happened (government deception). <strong>Attrition & search‑and‑destroy</strong> → millions of refugees, Agent Orange.<br>
+            <strong>Credibility gap</strong> – TV exposed brutality (CBS 1965). <strong>Tet Offensive (Jan 1968):</strong> military defeat for North but shattered U.S. public confidence. <strong>My Lai Massacre (1968)</strong> – 300–500 civilians killed; destroyed military trust.<br>
+            <strong>Antiwar movement:</strong> SDS, teach-ins, draft resistance. Kent State (1970) – National Guard killed 4 students. <strong>Vietnamization</strong> (Nixon) shifted fighting to South. War Powers Act (1973) limited executive war power. Saigon fell 1975. 58,000 U.S. dead, $100B+. 26th Amendment lowered voting age to 18.</p>
+        </section>
 
-</main>
+        <section id="civil-rights">
+            <h2>✊ Civil Rights Movement</h2>
+            <p><strong>Brown v. Board (1954)</strong> overturned Plessy – “separate inherently unequal.” <strong>Massive Resistance</strong> & Southern Manifesto. Emmett Till murder (1955) galvanized movement.<br>
+            <strong>Montgomery Bus Boycott</strong> (381 days) – MLK emerges. <strong>Little Rock Nine</strong> – Eisenhower sent 101st Airborne to enforce integration. Sit‑ins (1960) → SNCC. Freedom Rides, Birmingham (police dogs & fire hoses), March on Washington (“I Have a Dream”). <strong>Civil Rights Act (1964)</strong> – banned discrimination in public accommodations & employment. <strong>Voting Rights Act (1965)</strong> – ended literacy tests, federal oversight. <strong>Loving v. Virginia (1967)</strong> – legalized interracial marriage.<br>
+            <strong>Malcolm X</strong> (Black separatism/self‑defense) vs. <strong>MLK</strong> (nonviolence/integration). Black Power & Black Panthers (survival programs, police monitoring). MLK assassinated 1968.</p>
+        </section>
 
-<script>
-  document.querySelectorAll('.qa-q').forEach(q => {
-    q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
-    });
-  });
-</script>
+        <section id="jfk-lbj">
+            <h2>Kennedy’s New Frontier & LBJ’s Great Society</h2>
+            <p><strong>JFK:</strong> New Frontier; Bay of Pigs; Cuban Missile; assassinated Nov 1963. <strong>LBJ:</strong> “War on Poverty” → Economic Opportunity Act (1964), Medicare/Medicaid (1965), HUD, Elementary & Secondary Education Act. <em>However, Vietnam drained $21B/year, fueling inflation.</em> Graphs from period show consistent racial gaps in life expectancy, poverty, infant mortality – legacy of Jim Crow.</p>
+        </section>
 
+        <section id="1968-nixon">
+            <h2>1968: Year of Turmoil & Nixon Era</h2>
+            <p>Tet Offensive, MLK & RFK assassinations, Chicago DNC “police riot.” Nixon wins with <strong>Southern Strategy</strong> appealing to white backlash.<br>
+            <strong>Nixon:</strong> Vietnamization, détente, opened China (1972), SALT I, created EPA. <strong>Watergate</strong> – break‑in & cover‑up → resignation (Aug 1974). Only president to resign. Ford pardons Nixon.<br>
+            <strong>Pentagon Papers</strong> revealed systematic government lying about Vietnam.</p>
+        </section>
+
+        <section id="social-movements">
+            <h2>📢 Social Movements (1960s–1970s)</h2>
+            <div class="glossary">
+                <strong>👩 Women’s Rights:</strong> <em>The Feminine Mystique</em> (1963) – Betty Friedan → NOW founded. Title IX (1972), Roe v. Wade (1973). ERA fails (Schlafly opposition).<br>
+                <strong>🌱 Environmental:</strong> Rachel Carson <em>Silent Spring</em> (1962), Cuyahoga River fire (1969) → EPA (1970), Clean Air Act, Earth Day. Three Mile Island (1979).<br>
+                <strong>🧑‍🌾 Latino Rights:</strong> César Chávez & Dolores Huerta – United Farm Workers; grape boycott (1965-70) wins wage increases. Brown Berets & Chicano walkouts.<br>
+                <strong>🪶 American Indian Movement (AIM):</strong> Occupation of Alcatraz (1969), Trail of Broken Treaties, Wounded Knee (1973) → Indian Self‑Determination Act (1975).<br>
+                <strong>🏳️‍🌈 Gay Liberation:</strong> Stonewall Inn uprising (1969) → Gay Liberation Front; first Pride parades (1970). APA declassified homosexuality as disorder (1973).
+            </div>
+        </section>
+
+        <section id="suburb-culture">
+            <h2>Postwar Economy & 1950s Mass Culture</h2>
+            <p><strong>GI Bill</strong> (1944) – college, home loans → middle class expansion. GDP doubled, baby boom (50 million births). <strong>Suburbanization:</strong> Levittown, FHA redlining, Interstate Highway Act (1956). Sun Belt growth. Television reaches 90% of homes; advertising & credit cards fuel consumerism. Rock ’n’ roll (Elvis, Chuck Berry) mixed racial boundaries.<br>
+            <strong>Critics of conformity:</strong> Mills (<em>The Power Elite</em>), Riesman (<em>The Lonely Crowd</em>), Galbraith. <strong>Beat Generation</strong> (Kerouac, Ginsberg). 1960s counterculture: hippies, Woodstock (1969), SDS & Port Huron Statement – “participatory democracy.”</p>
+        </section>
+
+        <section id="conservatism">
+            <h2>Rise of Modern Conservatism</h2>
+            <p>Three goals: stop moral decline, limit federal gov, aggressive foreign policy. <strong>William F. Buckley</strong> (National Review). Goldwater (1964) championed states’ rights. Nixon’s Southern Strategy. 1970s evangelical surge – <strong>Moral Majority</strong> (Jerry Falwell), Focus on the Family. Laid foundation for Reagan Revolution.</p>
+        </section>
+
+        <section id="exam-tips">
+            <h2>📌 Exam Tips & Key Takeaways</h2>
+            <ul>
+                <li><strong>Compare/Contrast:</strong> civil rights protests vs. anti-war protests; MLK/Malcolm X vs. earlier figures.</li>
+                <li><strong>Brown v. Board</strong> overturned Plessy. Eisenhower enforced integration at Little Rock despite personal disagreement.</li>
+                <li><strong>Gulf of Tonkin second attack never happened</strong> – led to credibility gap.</li>
+                <li><strong>Containment</strong> = George Kennan’s idea; applied in Truman Doctrine, Korean War, Vietnam.</li>
+                <li><strong>NSC-68</strong> quadrupled defense spending & shaped Cold War militarization.</li>
+                <li><strong>War Powers Act (1973)</strong> restored congressional checks after Vietnam.</li>
+                <li><strong>26th Amendment (1971):</strong> voting age 18 – “old enough to fight, old enough to vote.”</li>
+                <li><strong>Cold War remained “cold”</strong> because superpowers never fought directly (proxy wars, MAD).</li>
+                <li>Know <strong>difference between JFK’s New Frontier and LBJ’s Great Society</strong> – LBJ passed landmark legislation.</li>
+                <li>For essays: connect WWII to postwar conditions (Cold War + civil rights gains).</li>
+            </ul>
+        </section>
+
+        <footer>
+            <span>📚 APUSH Period 8 Complete Study Guide — Truman to Carter | Cold War · Civil Rights · Vietnam · Counterculture</span>
+        </footer>
+    </main>
+</div>
+<button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆ Back to top</button>
 </body>
 </html>
